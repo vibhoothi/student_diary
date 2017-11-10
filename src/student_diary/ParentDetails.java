@@ -16,8 +16,7 @@ public class ParentDetails implements Serializable {
 			occupation="";
 		}
 		
-		ParentDetails(String dName,String mName, String mail, String no,String occ)
-		{
+		ParentDetails(String dName,String mName, String mail, String no,String occ){
 			dadName=dName;
 			momName=mName;
 			email=mail;
@@ -71,7 +70,6 @@ public class ParentDetails implements Serializable {
 				System.out.println(ioe);
 			}catch (ClassNotFoundException cnf) {
 				System.out.println(cnf);
-			
 			}
 		}
 		public void writeFile() {
@@ -86,7 +84,6 @@ public class ParentDetails implements Serializable {
 				
 			}catch (IOException ioe) {
 				System.out.println(ioe);
-			
 			}
 		}
 		
@@ -96,9 +93,5 @@ public class ParentDetails implements Serializable {
 			System.out.println("Phone:"+pNo);
 			System.out.println("Email:"+email);
 			System.out.println("Occupation:"+occupation);
-		}
-
-		
-		
-
+		}		
 	}
