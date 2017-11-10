@@ -22,6 +22,7 @@ public  class Periodicals implements Marks {
 		p1Marks=s.nextInt();
 		System.out.println("Enter Periodical 2 Marks");
 		p2Marks=s.nextInt();
+		s.close();
 	}
 	public void display() {
 		System.out.println("First Periodical:"+p1Marks);

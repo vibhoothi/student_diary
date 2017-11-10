@@ -2,12 +2,12 @@ package student_diary;
 
 import java.lang.reflect.Array;
 
-public class cgpa{
+public class Cgpa{
     float cgpa;
-    public cgpa(){
+    public Cgpa(){
         cgpa=0;
     }
-    public cgpa(int x){
+    public Cgpa(int x){
         cgpa=x;
     }
    // float[] sgpa =new float[8];
@@ -20,4 +20,5 @@ public class cgpa{
         cgpa=cgpa/size;
         return cgpa;
     }
+    
 }
