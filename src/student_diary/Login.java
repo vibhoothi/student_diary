@@ -2,10 +2,10 @@ package student_diary;
 
 import java.util.Scanner;
 
-public class login {
+public class Login {
 	 Scanner s= new Scanner(System.in);
+	 String userName,password;
 	 void in() {
-     String userName,password;
      System.out.println("Enter UserID");
      userName=s.nextLine();
      System.out.println("Enter password");
@@ -19,6 +19,7 @@ public class login {
      System.out.print("        Password:");
      for( i=0;i<passLen;++i)
      System.out.print("*");
-     s.close();
+     System.out.println(" ");
+     
 	 }
 }
