@@ -1,10 +1,12 @@
 package student_diary;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
-public  class Periodicals implements Marks {
+public  class Periodicals implements Marks,Serializable {
 	int p1Marks;
 	int p2Marks;
+	
 	Periodicals(){
 		p1Marks=0;
 		p2Marks=0;	
@@ -22,7 +24,7 @@ public  class Periodicals implements Marks {
 		p1Marks=s.nextInt();
 		System.out.println("Enter Periodical 2 Marks");
 		p2Marks=s.nextInt();
-		s.close();
+		
 	}
 	public void display() {
 		System.out.println("First Periodical:"+p1Marks);
