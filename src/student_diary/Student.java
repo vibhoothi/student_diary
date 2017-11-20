@@ -1,39 +1,32 @@
 package student_diary;
-
+import java.io.ObjectOutputStream;
+import java.io.Serializable;  
 import java.text.SimpleDateFormat;
 import java.util.*;
-public class student {
+public class Student implements Serializable {
 	String name;
 	String rollNo;
     String campus;
-	Date dob;
 	String gender;
 	int semester;
 	String branch;
-	public student() {
-		name="";
-		rollNo="";
-	    Calendar c = Calendar.getInstance();
-	    c.set(2016,1,1);
-		dob=c.getTime();	
-		gender=" ";
+	public Student() {
+		name= "TEST";
+		rollNo="000";
+		gender="XXX ";
 		semester=1;
-		branch=" ";
+		branch="S3";
 	}
-	public student(String name,String rollNo,String campus,Date dob,String gender,int semester,String branch) {
+	public Student(String name,String rollNo,String campus,String gender,int semester,String branch) {
 		this.name=name;
 		this.rollNo=rollNo;
 		this.campus=campus;
-		this.dob=dob;
 		this.gender=gender;
 		this.semester=semester;
 		this.branch=branch;
 	}
 	public String getName() {
 		return name;
-	}
-	public Date getDate() {
-		return dob;
 	}
 	public String getRollNo() {
 		return rollNo;
@@ -53,32 +46,28 @@ public class student {
 	
 	public void newStudent() {
 		Scanner s= new Scanner(System.in);
-		this.name=s.next();
-		this.rollNo=s.next();
-		this.branch=s.next();
-		this.gender=s.next();
-		this.semester=s.nextInt();
-		this.campus=s.next();
-		System.out.println("Enter DOB(YYYY/MM/DD) order");
-		int year,month,day;
-		year=s.nextInt();
-		month=s.nextInt();
-		day=s.nextInt();
-		Calendar ca=Calendar.getInstance();
-		ca.set(year, month, day);
-		s.close();
+		System.out.println("Enter Name:");
+		name=s.nextLine();
+		System.out.println("Enter RollNo");
+		rollNo=s.nextLine();
+		System.out.println("Enter Branch");		
+		branch=s.nextLine();
+		System.out.println("Enter Gender");
+		gender=s.nextLine();
+		System.out.println("Enter semester");
+		semester=s.nextInt();
+		System.out.println("Enter Campus");
+		campus=s.nextLine();
 	}
+	
 	public void printDetails() {
-	 System.out.println("Name"+name);
-	 System.out.println("rollNo"+name);	
-	 System.out.println("campus"+name);
-	 System.out.println("Branch:"+branch);
-	 System.out.println("Semester"+semester);
-	 System.out.println("gender:"+branch);
-	 SimpleDateFormat date =new SimpleDateFormat("dd/MM/yyyy");
-	 System.out.println("DOB"+date.format(dob));
-	 
-	 
-	 
+	 System.out.println("Name :"+name);
+	 System.out.println("Roll Number :"+rollNo);	
+	 System.out.println("Campus Name :"+campus);
+	 System.out.println("Branch :"+branch);
+	 System.out.println("Semester :"+semester);
+	 System.out.println("Gender :"+gender);
 	}
+	
+	
 }
