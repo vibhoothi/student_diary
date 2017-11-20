@@ -40,53 +40,18 @@ public class ParentDetails implements Serializable {
 			return occupation;
 		}
 		public void getParentDetails(){
-			Scanner sc = new Scanner(System.in);
+			Scanner s3 = new Scanner(System.in);
 			System.out.println("Enter your Father's Name");
-			dadName=sc.next();
+			dadName=s3.next();
 			System.out.println("Enter your Mother's Name");
-			momName=sc.next();
+			momName=s3.next();
 			System.out.println("Enter your father's phone number");
-			pNo=sc.next();
+			pNo=s3.next();
 			System.out.println("Enter the email");
-			email=sc.next();
+			email=s3.next();
 			System.out.println("Enter father's occupation");
-			occupation=sc.next();
+			occupation=s3.next();
 		}
-		public void readFile() {
-			try {
-				FileInputStream fin = new FileInputStream("ParentDetail.ser");
-				ObjectInputStream ois = new ObjectInputStream(fin);
-				ParentDetails p = (ParentDetails) ois.readObject();
-				this.dadName = p.dadName;
-				this.momName = p.momName;
-				this.email = p.email;
-				this.pNo = p.pNo;
-				this.occupation = p.occupation;
-				fin.close();
-			}catch (FileNotFoundException fnf){
-				System.out.println(fnf);
-				
-			}catch (IOException ioe) {
-				System.out.println(ioe);
-			}catch (ClassNotFoundException cnf) {
-				System.out.println(cnf);
-			}
-		}
-		public void writeFile() {
-			try {
-				FileOutputStream fout = new FileOutputStream("ParentDetail.ser");
-				ObjectOutputStream oos = new ObjectOutputStream(fout);
-				ParentDetails p = new ParentDetails(this.dadName, this.momName, this.email, this.pNo, this.occupation);
-				oos.writeObject(p);
-				fout.close();
-			}catch (FileNotFoundException fnf){
-				System.out.println(fnf);
-				
-			}catch (IOException ioe) {
-				System.out.println(ioe);
-			}
-		}
-		
 		public void displayData() {
 			System.out.println("Dad's Name:"+dadName);
 			System.out.println("Mom's Name:"+momName);
